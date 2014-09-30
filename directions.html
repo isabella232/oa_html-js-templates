@@ -30,6 +30,32 @@
 		}, false);
 	</script>
 	
+	<!-- Below is the js for Analytics -->
+	<noscript><img src="https://t.paypal.com?nojs=1&pgrp=homepage&tmpl=home.html" alt="" height="1" width="1" border="0"></noscript>
+	<script src="assets/js/pa_thirdparty.js"></script>
+	<script type="text/javascript">
+	PAYPAL.analytics.setup();
+	$(document).ready(function() 
+	 {
+		var d = new Date();
+		
+		var pgrp = 'mobile:consapp:shop:OAppDemoPS',
+		page = 'mobile:consapp:shop:OAppDemoPS:directions::',
+		ccpg = 'usa',
+		server = "//t.paypal.com/ts",
+		e = 'im',
+		ts = d.getTime(), 
+		g = d.getTimezoneOffset(), 
+		srce = 'eci:orderahead:ppDemoPS',
+		mlid = sessionStorage.getItem("locationId"),
+		cust = sessionStorage.getItem("customerId"),
+		poschk = sessionStorage.getItem("tabId"),
+		ptname = 'paypalDemoPS',
+		mlname = '';  //This value should be the merchant's name, ie. 'Jane Street Cafe'
+		
+	 });		
+	</script>
+	
     <style>
       html, body, #map-canvas {
         height: 80%;

@@ -51,7 +51,8 @@
 				mlid = sessionStorage.getItem("locationId"),
 				cust = sessionStorage.getItem("customerId"),
 				poschk = sessionStorage.getItem("tabId"),
-				ptname = 'paypalDemoPS';
+				ptname = 'paypalDemoPS',
+				mlname = '';  // This value should be the merchant's name, ie. 'Jane Street Cafe'
 				
 			$( "#addToOrder" ).click(function(e) {
 				var pgln = 'mobile:consapp:shop:OAppDemoPS:addItem::|addToCart',

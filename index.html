@@ -81,7 +81,8 @@
 				btype = browserNameVersion[0],
 				bver = browserNameVersion[1],
 				os = navigator.platform,
-				ip = sessionStorage.getItem("ip");
+				ip = sessionStorage.getItem("ip"),
+				mlname = '';  // This value should be the merchant's name, ie. 'Jane Street Cafe'
 
 			// alert(mlid+","+cust+","+poschk+","+btype+","+bver);
 
@@ -125,10 +126,14 @@
 				var order_option = $('#order_option').val();
 				if(order_option == "Take Out"){
 					pgln = 'mobile:consapp:shop:OAppDemoPS:cart::|pickup',
-					pglk = 'mobile:consapp:shop:OAppDemoPS|pickup';
+					pglk = 'mobile:consapp:shop:OAppDemoPS|pickup',
+					otype = 'pickup';
 				}else if(order_option == "Delivery"){
 					pgln = 'mobile:consapp:shop:OAppDemoPS:cart::|delivery',
-					pglk = 'mobile:consapp:shop:OAppDemoPS|delivery';
+					pglk = 'mobile:consapp:shop:OAppDemoPS|delivery',
+					otype = 'delivery';
+				}else if(order_option == "Eat In"){
+					otype = 'eatIn';
 				}
 			});
 

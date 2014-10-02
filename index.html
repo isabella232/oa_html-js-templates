@@ -581,7 +581,7 @@
 					</li>
 				</ul>
 				<div class="cart-move-on">
-					<a href="#ordertype" data-role="none" class="PwPP PPBlue no-empty" data-transition="slide" id="set_order_type"><b>Next: Set Order Type</b></a>
+					<a href="#ordertype" data-role="none" class="PwPP PPBlue no-empty" data-transition="slide" id="set_order_type"><b>Checkout</b></a>
 					<a data-role="button" data-transition="slide" data-direction="reverse" data-theme="h" href="#home">Add <span class="no-empty">More</span> Items</a>
 				</div>
 				
@@ -615,6 +615,7 @@
 			            <select name="order_option" id="order_option" data-mini="true">
 			                <option value="Eat In">Eat In</option>
 			                <option value="Take Out">Take Out</option>
+			                <!-- If the user selects delivery as their order option, you'll want to use a programming language of your choice to verify that their order meets the minimum delivery amount set by the merchant. If the current cart totals do not equal the set minimum, redirect the user back to the menu to add additional items. -->
 			                <option value="Delivery">Delivery</option>
 			            </select>
 					</li>
@@ -670,7 +671,7 @@
 					</li>
 			     </ul>
 			     <div>
-					<a href="#confirm" data-role="none" class="PwPP PPBlue" data-transition="slide" id="confirm_order"><b>Next: Confirm Order</b></a>
+					<a href="#confirm" data-role="none" class="PwPP PPBlue" data-transition="slide" id="confirm_order"><b>Continue Order</b></a>
 					<a data-role="button" data-rel="back" data-theme="h" href="#cart">Change Order</a>
 				</div>
 				
@@ -740,11 +741,17 @@
 				<br>
 				<br>
 				<ul data-role="listview" id="done_list" data-inset="true" style="margin-top:0px;" class="island">
+
 					<li data-theme="d" class="slim_header">Order Complete</li>
 					<li data-theme="d">
-						<p class="grey">Approx. Order Time: <span class="pickup_time">0:00</span></p>
-						<p class="grey">Total: <span><span>$6.34</span> Paid with PayPal</span></p>
-						<p>PayPal - the faster, safer way to send money in-store!<p>
+						<p class="grey">Order Time: <span class="order_time">5:43 PM</span></p>
+						<p class="grey">Order Number: <span class="pickup_time">0829G41</span></p>
+						<p class="grey">Order Total: <span><span>$6.34</span> Paid with PayPal</span></p>
+						<!-- * Display these 2 rows only if the API response contains a value for 'specialOffersRedeemed' -->
+						<p class="grey">Special Offer: <span style="color: green;" class="special_offer">- $3.00</span></p>
+						<p class="grey">You Paid: <span class="amt_paid">$3.34</span></p>
+						<!-- * -->
+						<p class="grey">Approx. Delivery Time: <span class="pickup_time">0:00</span></p>
 					</li>
 				</ul>
 				
